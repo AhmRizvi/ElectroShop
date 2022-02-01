@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="50dp"
+    android:layout_height="50dp">
+
+    <ImageView
+        android:id="@+id/cartimg"
+        android:layout_width="@dimen/cart_icon_size"
+        android:layout_height="@dimen/cart_icon_size"
+        android:layout_gravity="center"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:src="@drawable/ic_baseline_shopping_cart_24">
+
+    </ImageView>
+
+    <TextView
+        android:id="@+id/cartvalue"
+        android:layout_width="@dimen/valuesize"
+        android:layout_height="20sp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="10dp"
+        android:gravity="center"
+        android:text="0"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="15sp">
+
+    </TextView>
+
+</FrameLayout>

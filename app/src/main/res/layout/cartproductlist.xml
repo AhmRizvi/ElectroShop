@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cartviewCart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="3dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/cartprodimg"
+                android:layout_width="140dp"
+                android:layout_height="140dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/desktop" />
+
+            <TextView
+                android:id="@+id/cartprodname"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="12dp"
+                android:text="Apple MacBook Air 13 ff´´ M1/8GB/256GB SSD Laptop"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/cartprodimg"
+                app:layout_constraintTop_toTopOf="@+id/cartprodimg" />
+
+            <TextView
+                android:id="@+id/cartprodprice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Price : 25000"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="@+id/cartprodname"
+                app:layout_constraintTop_toBottomOf="@+id/cartprodname" />
+
+            <TextView
+                android:id="@+id/cartprodstock"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Stock: Avialable"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="@+id/cartprodprice"
+                app:layout_constraintTop_toBottomOf="@+id/cartprodprice" />
+
+            <TextView
+                android:id="@+id/minusquantitybtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:background="#8AE1E1E1"
+                android:fontFamily="sans-serif-smallcaps"
+                android:paddingLeft="10sp"
+                android:paddingRight="10sp"
+                android:text="-"
+                android:textSize="34sp"
+                app:layout_constraintStart_toStartOf="@+id/cartprodtotalprice"
+                app:layout_constraintTop_toBottomOf="@+id/cartprodtotalprice" />
+
+            <EditText
+                android:id="@+id/cartprodquantity"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="40sp"
+                android:layout_height="40sp"
+                android:layout_marginStart="5dp"
+                android:background="#8AE1E1E1"
+                android:ems="10"
+                android:gravity="center"
+                android:inputType="number"
+                android:maxLength="3"
+                android:text="111"
+                app:layout_constraintBottom_toBottomOf="@+id/minusquantitybtn"
+                app:layout_constraintStart_toEndOf="@+id/minusquantitybtn"
+                app:layout_constraintTop_toBottomOf="@+id/cartprodtotalprice"
+                app:layout_constraintVertical_bias="1.0" />
+
+
+            <TextView
+                android:id="@+id/addprodquantitybtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:background="#8AE1E1E1"
+                android:fontFamily="sans-serif-smallcaps"
+                android:paddingLeft="10sp"
+                android:paddingRight="10sp"
+                android:text="+"
+                android:textSize="34sp"
+                app:layout_constraintBottom_toBottomOf="@+id/cartprodquantity"
+                app:layout_constraintEnd_toStartOf="@+id/cartprodbuybtn"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/cartprodquantity"
+                app:layout_constraintTop_toBottomOf="@+id/cartprodtotalprice"
+                app:layout_constraintVertical_bias="1.0" />
+
+            <TextView
+                android:id="@+id/cartprodremovebtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="12dp"
+                android:background="#ED5E68"
+                android:paddingLeft="11sp"
+                android:paddingTop="5sp"
+                android:paddingRight="11sp"
+                android:paddingBottom="5sp"
+                android:text="Remove"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cartprodname" />
+
+            <TextView
+                android:id="@+id/cartprodbuybtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="12dp"
+                android:background="@color/project"
+                android:paddingLeft="7sp"
+                android:paddingTop="5sp"
+                android:paddingRight="7sp"
+                android:paddingBottom="5sp"
+                android:text="Checkout"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/addprodquantitybtn"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/addprodquantitybtn" />
+
+            <TextView
+                android:id="@+id/cartprodtotalprice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Total price : 1000000"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/cartprodstock"
+                app:layout_constraintTop_toBottomOf="@+id/cartprodstock" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>
